@@ -226,3 +226,33 @@ def array_mul array
 	end 
 	mul
 end
+
+#3.2
+=begin
+puts "Выберите метод:\n1. Минимальный элемент\n2. Максимальный элемент\n3. Сумма\n4. Произведение"
+met_num=gets.chop.to_i
+puts "Откуда считать список?\n1. Из файла\n2. С клавиатуры"
+from_where=gets.chop.to_i
+
+if from_where == 2 then array = get_array
+else
+	if from_where == 1 then
+		puts "Введите адрес файла"
+  		file = gets.chop
+  		File.open(file,"r") do |f|
+   			while (line = f.gets) 
+   				array.append(line.to_i) 
+   			end
+   		end
+    end
+end
+
+case met_num
+when 1 then puts array_min array
+when 2 then puts array_max array
+when 3 then puts array_sum array
+when 4 then puts array_mul array
+else
+  	puts "Ошибка"
+end
+=end
