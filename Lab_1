@@ -1,2 +1,5 @@
 #1.1
 #puts("Hello World!")
+
+#1.2
+#puts "Привет, " + ARGV[0]
