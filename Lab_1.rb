@@ -115,3 +115,68 @@ def mult num
   	end
   	res
 end
+
+#2.3
+#1
+def prost num
+	if num == 1 then return true end
+	num1 = num-1
+	while num1 != 1
+		if num % num1 == 0 then 
+			return false end
+		num1 -= 1
+	end
+	true	
+end
+
+def sum_nprost_del num
+	res = 0 
+	num1 = num
+	while num1 != 0
+		if !(prost num1) and (num % num1 == 0) 
+			then res += num1 
+			puts num1
+		end 
+		num1 -= 1
+	end
+	res
+end 
+
+#2
+def count_less_3 num
+	res = 0 
+	while num != 0
+		if num % 10 < 3 then res += 1 end
+		num /= 10
+	end
+	res
+end
+
+#3
+def vzaim_prost num1, num2
+	nod = if num1 > num2 then num2 else num1 end
+	while nod > 1 
+		if num1 % nod == 0 and num2 % nod == 0 then return false end
+		nod -= 1
+	end
+	true
+end
+
+def sum_prost num
+	res = 0
+	while num != 0
+		if prost(num % 10) then res += num % 10 end
+		num /= 10
+	end
+	res
+end
+
+def method_3 num
+	res = 0
+	num1 = num
+	while num1 != 0
+		if num % num1 != 0 and vzaim_prost num, num1 and !vzaim_prost(num1, sum_prost(num1)) then res += 1 end
+		num1 -= 1
+	end
+	res
+end
