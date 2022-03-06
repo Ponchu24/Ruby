@@ -63,3 +63,14 @@ puts "Введите команду Ruby:"
 com2 = gets.chop
 puts eval com2 
 =end
+
+#2.1
+=begin
+a = ARGV[0].to_i
+b = 0
+while a != 0
+	b += a % 10
+	a /= 10
+end
+puts b
+=end
