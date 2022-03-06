@@ -200,3 +200,30 @@ def array_min
 	end
 	min
 end
+
+def array_max
+	array = get_array
+	max = array[0]
+	for i in 0...array.length
+		max = if array[i] > max then array[i] else max end
+	end
+	max
+end
+
+def array_sum 
+	array = get_array
+	sum = 0
+	array.each do | el |
+		sum += el
+	end
+	sum
+end
+
+def array_mul
+	array = get_array
+	mul = 1
+	array.each do | el |
+		mul *= el
+	end 
+	mul
+end
