@@ -256,3 +256,24 @@ else
   	puts "Ошибка"
 end
 =end
+
+#4.1
+=begin
+array = [1,-1,3,4,51,6,7]
+rev_arr = []
+flag = false
+
+min = array.min
+max = array.max
+
+array.each do |el|
+	if (el == min or el == max) and !rev_arr.empty? then flag = false end
+	if flag then rev_arr.append(el) end
+	if (el == min or el == max) and rev_arr.empty? then flag = true end
+end
+
+rev_arr.reverse!()
+if array.index(min) < array.index(max) then array[array.index(min)+1...array.index(max)] = rev_arr else array[array.index(max)+1...array.index(min)] = rev_arr end
+
+puts array
+=end
