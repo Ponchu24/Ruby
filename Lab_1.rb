@@ -53,3 +53,13 @@ when "python" then puts("Слишком легко!")
 else puts("Скоро будет ruby")
 end
 =end
+
+#1.4
+=begin
+puts "Введите команду ОС:"
+com1 = gets.chop
+puts `#{com1}`
+puts "Введите команду Ruby:"
+com2 = gets.chop
+puts eval com2 
+=end
