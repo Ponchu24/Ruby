@@ -74,3 +74,44 @@ while a != 0
 end
 puts b
 =end
+
+#2.2
+def sum num
+	res = 0
+	while num != 0
+    	res += num % 10
+    	num /= 10
+    end
+	res
+end
+
+def max num
+	max = num % 10
+	num /= 10
+	while num != 0
+    	max = if num % 10 > max 
+    	then num % 10 
+    	else max end
+    num /= 10
+  	end
+  	max
+end
+
+def min num
+	min = num % 10
+	num /= 10
+	while num != 0
+    	min = if num % 10 < min then num % 10 else min end
+    num /= 10
+  end
+  min
+end
+
+def mult num
+	res = 1
+	while num != 0
+    	res *= num % 10
+    	num /= 10
+  	end
+  	res
+end
