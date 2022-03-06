@@ -182,6 +182,9 @@ def method_3 num
 end
 
 #3.1
+
+array = []
+
 def get_array
 	array = []
 	el = gets
@@ -192,8 +195,7 @@ def get_array
 	array
 end
 
-def array_min
-	array = get_array
+def array_min array
 	min = array[0]
 	for i in 0...array.length
 		min = if array[i] < min then array[i] else min end
@@ -201,8 +203,7 @@ def array_min
 	min
 end
 
-def array_max
-	array = get_array
+def array_max array
 	max = array[0]
 	for i in 0...array.length
 		max = if array[i] > max then array[i] else max end
@@ -210,8 +211,7 @@ def array_max
 	max
 end
 
-def array_sum 
-	array = get_array
+def array_sum array
 	sum = 0
 	array.each do | el |
 		sum += el
@@ -219,8 +219,7 @@ def array_sum
 	sum
 end
 
-def array_mul
-	array = get_array
+def array_mul array
 	mul = 1
 	array.each do | el |
 		mul *= el
