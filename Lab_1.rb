@@ -285,4 +285,6 @@ array = [1,-1,3,4,51,6,1,1,7]
 puts array.max
 array.delete(array.max)
 puts array.max
+
+puts array.max(2)
 =end
