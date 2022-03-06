@@ -288,3 +288,10 @@ puts array.max
 
 puts array.max(2)
 =end
+
+#4.3
+=begin
+array = [1,-1,3,4,52,6,1,1,7]
+
+puts array.max { |a, b| if b%2!=0 then a <=> b else a end}
+=end
