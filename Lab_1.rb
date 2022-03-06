@@ -296,3 +296,14 @@ array = [1,-1,3,4,52,6,1,1,7]
 puts array.max { |a, b| if b%2!=0 then a <=> b else a end}
 =end
  
+#4.4
+=begin
+array = [1,-1,3,4,52,6,1,1,7,7,7,7,7,77,7]
+arr1 = array.reduce({}) do |acc, el| 
+	acc[el] ||= 0
+	acc[el] += 1
+	acc
+end
+puts arr1.key(arr1.values.max)
+=end
+	
