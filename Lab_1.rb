@@ -277,3 +277,12 @@ if array.index(min) < array.index(max) then array[array.index(min)+1...array.ind
 
 puts array
 =end
+
+#4.2
+=begin
+array = [1,-1,3,4,51,6,1,1,7]
+
+puts array.max
+array.delete(array.max)
+puts array.max
+=end
