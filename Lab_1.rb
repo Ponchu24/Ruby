@@ -180,3 +180,23 @@ def method_3 num
 	end
 	res
 end
+
+#3.1
+def get_array
+	array = []
+	el = gets
+	while el != "\n"
+		array.append(el.to_i)
+		el = gets
+	end
+	array
+end
+
+def array_min
+	array = get_array
+	min = array[0]
+	for i in 0...array.length
+		min = if array[i] < min then array[i] else min end
+	end
+	min
+end
