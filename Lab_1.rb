@@ -315,3 +315,6 @@ puts arr1.key(arr1.values.max)
 #	str[el] = str[el].split("").shuffle.join
 #end
 #p str
+
+#5.2
+#p str = "Bana12na Pin654eapple Appl2e Oran1ge Waterm87elon".delete(' ').split("").sort!.join
