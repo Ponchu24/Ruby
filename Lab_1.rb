@@ -307,3 +307,11 @@ end
 puts arr1.key(arr1.values.max)
 =end
 	
+#5.1
+
+#p str = "Banana Pineapple Apple Orange Watermelon".split()
+
+#for el in 1...str.length-1 	
+#	str[el] = str[el].split("").shuffle.join
+#end
+#p str
