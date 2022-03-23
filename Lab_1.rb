@@ -330,3 +330,27 @@ def finddate str
   end
   res
 end
+
+#5.3
+def find_more_5 reg, str
+	n = 0
+	while str.match(reg).to_s != "" and str.match(reg).to_s.to_i > 5
+		n+=1
+		str.sub!(str.match(reg).to_s,"")
+	end
+	n
+end
+
+=begin
+puts "Выберите задачу: "
+ex = gets.chomp
+reg = /[1-9][0-9]*/
+str = gets.chomp
+case ex 
+when "1" then
+		p find_more_5 reg, str
+when "2" then
+	a = ("а".."я").to_a + ("А".."Я").to_a
+	p (a - str.scan(/[а-яА-Я]/)).join
+end
+=end
