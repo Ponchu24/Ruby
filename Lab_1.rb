@@ -382,3 +382,23 @@ end
 
 p arr.sort {|a, b| fun631(a,max) <=> fun631(b,max)}
 =end
+
+#10
+=begin
+def fun632 str
+	count = 0
+	for i in 0...str.length-2
+		if str[i] == str[i+2] then count+=1 end 
+	end
+	count
+end
+
+z = {}
+puts "Введите адрес файла"
+file=gets.chop
+arr = readlines file
+arr.each do |str|
+	z[str] = fun632 str
+end
+p arr.sort {|a, b| b.length/z[b] <=> a.length/z[a]}
+=end
