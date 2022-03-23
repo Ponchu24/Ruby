@@ -307,14 +307,16 @@ end
 puts arr1.key(arr1.values.max)
 =end
 	
-#5.1
+#5.1.1
+=begin
+p str = "Banana Pineapple Apple Orange Watermelon".split()
 
-#p str = "Banana Pineapple Apple Orange Watermelon".split()
+for el in 1...str.length-1 	
+	str[el] = str[el].split("").shuffle.join
+end
+p str
+=end
 
-#for el in 1...str.length-1 	
-#	str[el] = str[el].split("").shuffle.join
-#end
-#p str
-
-#5.2
+#5.1.2
 #p str = "Bana12na Pin654eapple Appl2e Oran1ge Waterm87elon".delete(' ').split("").sort!.join
+
