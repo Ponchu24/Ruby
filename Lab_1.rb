@@ -320,3 +320,13 @@ p str
 #5.1.2
 #p str = "Bana12na Pin654eapple Appl2e Oran1ge Waterm87elon".delete(' ').split("").sort!.join
 
+#5.2
+def finddate str
+  res=[]
+  reg = /((([0-2][1-9]|[1-3]0|31) (января|марта|мая|июля|августа|октября|декабря)|([0-2][1-9]|[1-3]0) (апреля|июня|сентября|ноября)|([0-2][1-9]) февраля) ((19|20)([0-9]{2})))/
+  while str.match(reg).to_s != ""
+    res.append(str.match(reg))
+    str.sub!(str.match(reg).to_s,"")
+  end
+  res
+end
