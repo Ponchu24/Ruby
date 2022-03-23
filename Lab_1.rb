@@ -354,3 +354,31 @@ when "2" then
 	p (a - str.scan(/[а-яА-Я]/)).join
 end
 =end
+
+#6.3
+=begin
+alph = {}
+str = {}
+
+puts "Введите адрес файла"
+file=gets.chop
+arr = readlines file
+
+arr.join.split("").each do |el|
+	alph[el] ||= 0
+	alph[el] += 1
+end
+
+max = alph.values.max
+
+def fun631 str, max
+	str_ = {}
+	str.split.each do |let|
+		str_[let] ||= 0
+		str_[let] += 1
+	end
+	str_.values.max - max
+end
+
+p arr.sort {|a, b| fun631(a,max) <=> fun631(b,max)}
+=end
